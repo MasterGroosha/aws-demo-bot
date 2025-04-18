@@ -20,9 +20,3 @@ called `BOT_TOKEN` and your bot token as value.
 <URL> with function URL you got from the previous step.
 12. Open this URL in web browser, you should see "Webhook was set" in JSON payload.
 13. Go to your bot on Telegram and send `/start`.
-
-P.S. Why not aiogram? That's because aiogram's dependency, `pydantic`, takes too much time to initialize and sometimes 
-3 seconds (default maximum lambda function execution time) is not enough. You can increase timeout in function settings, 
-but this might result in less allowed lambda function calls per month (there is both quantity and duration limit). So 
-instead I decided to use pyTelegramBotAPI. It's much simpler, but faster to initialize and still enough 
-for this small project.
